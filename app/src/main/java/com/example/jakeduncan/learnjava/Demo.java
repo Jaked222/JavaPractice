@@ -7,18 +7,14 @@ package com.example.jakeduncan.learnjava;
 public class Demo {
     public static void main(String[] args) {
 
-//        Enemy enemy = new Enemy("test enemy", 10, 3);
-//        enemy.showInfo();
-//        enemy.takeDamage(3);
-//        enemy.takeDamage(11);
-//        enemy.showInfo();
-        Troll uglyTroll = new Troll("Ugly Troll");
-        uglyTroll.showInfo();
-        uglyTroll.takeDamage(38);
+        VampireKing vking = new VampireKing("vking");
+        vking.showInfo();
 
-        Vampire vlad = new Vampire("Vlad");
-        vlad.showInfo();
-        vlad.takeDamage(8);
-        vlad.showInfo();
+        Player conan = new Player("Conan");
+        conan.pickUpLoot(new Loot("Cursed Shield", LootType.ARMOR, -8));
+
+        conan.showInventory();
+        conan.dropLoot("Cursed Shield");
+        conan.showInventory();
     }
 }
